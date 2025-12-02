@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Wealth Building System - Transform Your Financial Future God's Way</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c2c2c;
+            background: #fafaf8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 650px;
+            background: url('https://i.postimg.cc/s2hhFRHy/guillaume-issaly-2c7y-SCe-XO5o-unsplash.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(101, 67, 33, 0.85) 0%, rgba(139, 90, 43, 0.80) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #F4E4C1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+            color: #1E3A5F;
+            padding: 18px 45px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+            border: 2px solid #D4AF37;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            background: linear-gradient(135deg, #F0C84A 0%, #D4AF37 100%);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .problem-section h2 {
+            font-size: 2.5em;
+            color: #8B5A2B;
+            margin-bottom: 30px;
+        }
+
+        .problem-section .problem-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #4a4a4a;
+        }
+
+        .problem-section .pain-points {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .pain-point {
+            background: #f9f7f4;
+            border-left: 4px solid #B8860B;
+            padding: 20px 30px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #2c2c2c;
+        }
+
+        /* Introducing Section */
+        .introducing-section {
+            background: linear-gradient(135deg, #654321 0%, #8B6914 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .introducing-section img {
+            max-width: 600px;
+            width: 100%;
+            margin: 40px auto;
+            display: block;
+        }
+
+        .introducing-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #D4AF37;
+        }
+
+        .introducing-section p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .benefits-section h2 {
+            font-size: 2.5em;
+            color: #654321;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%);
+            padding: 35px;
+            border-radius: 10px;
+            border-top: 4px solid #D4AF37;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5em;
+            color: #8B5A2B;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card p {
+            color: #4a4a4a;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Transformation Section */
+        .transformation-section {
+            background: linear-gradient(135deg, #8B5A2B 0%, #A06D3A 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .transformation-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #D4AF37;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .transformation-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .transformation-item h3 {
+            font-size: 2em;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%);
+            padding: 50px;
+            border-radius: 15px;
+            border: 3px solid #D4AF37;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .guarantee-box h2 {
+            font-size: 2.2em;
+            color: #654321;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-box p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            color: #4a4a4a;
+            margin-bottom: 30px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #654321 0%, #8B6914 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #D4AF37;
+        }
+
+        .final-cta .urgency {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            color: #F4E4C1;
+        }
+
+        .price-box {
+            background: rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .price-box .original-price {
+            font-size: 1.5em;
+            text-decoration: line-through;
+            color: #F4E4C1;
+            opacity: 0.7;
+        }
+
+        .price-box .current-price {
+            font-size: 3em;
+            color: #D4AF37;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #3E2723;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero .subheadline {
+                font-size: 1.2em;
+            }
+
+            .problem-section h2,
+            .benefits-section h2,
+            .transformation-section h2 {
+                font-size: 2em;
+            }
+
+            .cta-button {
+                font-size: 1.1em;
+                padding: 15px 35px;
+            }
+
+            .final-cta h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stop Working Harder.<br>Start Building Kingdom Wealth.</h1>
+            <p class="subheadline">The Biblical Blueprint to Create Sustainable Income, Build Generational Wealth, and Fulfill Your Divine Assignment</p>
+            <a href="https://rbridgebusinessinstitute.newzenler.com/courses/kingdom-wealth-building/buy" class="cta-button">YES! I'm Ready to Build Kingdom Wealth →</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>You're Doing Everything "Right"... So Why Isn't It Working?</h2>
+            <p class="problem-text">You work hard. You pray. You tithe. You give. You budget. You even hustle late into the night. But let's be honest. The results still don't match the effort.</p>
+
+            <div class="pain-points">
+                <div class="pain-point">
+                    ✗ The income isn't steady... and you're tired of the feast-or-famine cycle
+                </div>
+                <div class="pain-point">
+                    ✗ The pressure doesn't lift... even when you're working yourself to exhaustion
+                </div>
+                <div class="pain-point">
+                    ✗ Deep down, you're starting to wonder if maybe you're missing something
+                </div>
+                <div class="pain-point">
+                    ✗ You feel like there's a disconnect between your faith and your finances
+                </div>
+            </div>
+
+            <p class="problem-text" style="margin-top: 40px; font-weight: 600;">Here's the truth: It's not that you're not faithful enough. It's not that you're not working hard enough. You're simply missing the SYSTEM that aligns Kingdom principles with wealth-building strategy.</p>
+        </div>
+    </section>
+
+    <!-- Introducing Section -->
+    <section class="introducing-section">
+        <div class="container">
+            <h2>Introducing...</h2>
+            <img src="https://i.postimg.cc/gJyNsXfK/the-kingdom-wealth-building-system.png" alt="The Kingdom Wealth Building System">
+            <p>A comprehensive training system that shows you how to build sustainable wealth using Biblical principles and proven business strategies—without compromising your faith or burning yourself out.</p>
+            <p style="margin-top: 30px;">This isn't about "getting rich quick" or prosperity gospel nonsense. This is about understanding how God designed wealth to flow, and positioning yourself to receive it—so you can fulfill your calling, provide for your family, and expand His kingdom.</p>
+            <a href="https://rbridgebusinessinstitute.newzenler.com/courses/kingdom-wealth-building/buy" class="cta-button" style="margin-top: 30px;">Enroll in Kingdom Wealth Building Now →</a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2>What You'll Discover Inside Kingdom Wealth Building</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Biblical Wealth Principles</h3>
+                    <p>Discover what Scripture actually says about wealth creation, stewardship, and prosperity—free from religious guilt and prosperity gospel extremes.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Multiple Income Streams</h3>
+                    <p>Learn how to create and manage multiple income sources that work together to build sustainable, God-honoring wealth.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Kingdom Business Models</h3>
+                    <p>Implement proven business frameworks that align with your values while generating consistent revenue.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Wealth Multiplication Strategies</h3>
+                    <p>Master the principles of sowing, reaping, and multiplying your resources according to Kingdom economics.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Financial Freedom Blueprint</h3>
+                    <p>Create a clear path from where you are to where God has called you to be financially—with practical action steps.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Stewardship & Legacy</h3>
+                    <p>Learn how to manage your wealth as a faithful steward and build a lasting legacy for generations to come.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation-section">
+        <div class="container">
+            <h2>The Transformation You Can Expect</h2>
+            <div class="transformation-grid">
+                <div class="transformation-item">
+                    <h3>From</h3>
+                    <p>Trading time for money with no end in sight</p>
+                </div>
+                <div class="transformation-item">
+                    <h3>To</h3>
+                    <p>Building assets that generate income 24/7</p>
+                </div>
+            </div>
+            <div class="transformation-grid">
+                <div class="transformation-item">
+                    <h3>From</h3>
+                    <p>Feeling guilty about wanting financial success</p>
+                </div>
+                <div class="transformation-item">
+                    <h3>To</h3>
+                    <p>Confidently pursuing wealth as a Kingdom assignment</p>
+                </div>
+            </div>
+            <div class="transformation-grid">
+                <div class="transformation-item">
+                    <h3>From</h3>
+                    <p>Living paycheck to paycheck with constant pressure</p>
+                </div>
+                <div class="transformation-item">
+                    <h3>To</h3>
+                    <p>Creating sustainable wealth with margin and peace</p>
+                </div>
+            </div>
+            <a href="https://rbridgebusinessinstitute.newzenler.com/courses/kingdom-wealth-building/buy" class="cta-button" style="margin-top: 40px;">Start Your Transformation Today →</a>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div class="guarantee-box">
+                <h2>🛡️ Your Investment is Protected</h2>
+                <p>I'm so confident that Kingdom Wealth Building will transform your financial future that I'm backing it with a complete satisfaction guarantee.</p>
+                <p>If you go through the training, implement what you learn, and don't see results or feel this wasn't worth your investment, simply reach out within 30 days for a full refund.</p>
+                <p><strong>No questions asked. No hard feelings. Your success is my mission.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Your Kingdom Assignment is Waiting</h2>
+            <p class="urgency">The question isn't whether God wants you to prosper.<br>The question is: Are you ready to step into what He's already prepared for you?</p>
+
+            <div class="price-box">
+                <p style="font-size: 1.2em; margin-bottom: 20px;">Complete Kingdom Wealth Building System</p>
+                <div class="current-price">Enroll Now</div>
+                <p style="opacity: 0.9;">One-time investment • Lifetime access • 30-day guarantee</p>
+            </div>
+
+            <a href="https://rbridgebusinessinstitute.newzenler.com/courses/kingdom-wealth-building/buy" class="cta-button" style="font-size: 1.5em; padding: 22px 55px;">YES! Enroll Me in Kingdom Wealth Building →</a>
+
+            <p style="margin-top: 40px; font-size: 1.1em; opacity: 0.9;">Join the believers who are building wealth God's way</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 R Bridge Business Institute. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">Building Kingdom Wealth, One Believer at a Time</p>
+        </div>
+    </footer>
+
+</body>
+</html>
